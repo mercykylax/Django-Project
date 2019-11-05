@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Django Students Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Students List</h2>
+  <table class="table table-striped table-bordered">
+<div class="container">    	
+    
+
+<body>
+<button><a href ="/student/add">Add student</a></button>
+
+
+	<tablehead>
+		
+		<tr>
+		<th>First Name</th>	
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>Gender</th>
+		<th>Details</th>
+		<th>Edit</th>
+		</tr>
+		{% for student in students %}
+		<tr>
+			<td>{{student.first_name}}</td>
+			<td>{{student.last_name}}</td>
+			<td>{{student.email}}</td>
+			<td>{{student.gender}}</td>
+			<td><a href = "/student/view/{{student.pk}}/">View More</a></td>	 
+			<td><a href = "/student/edit/{{student.pk}}/">Edit student</a></td>
+
+		</tr>
+		{% endfor %}
+
+
+		
+	</table>
+
+
+	
+</body>

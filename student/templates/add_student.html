@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="templates/css/main.css">
+</head>
+<body>
+	<style>
+	body{
+		background-color:purple;
+		padding: 30px; 
+	}
+
+
+
+</style>
+
+<h2>Add a new student</h2>
+<form method="POST">{% csrf_token %}
+	{{ form.as_p}}
+<button type="submit">Add</button>
+
+	</form>
+
+</body>
+</html>
